@@ -242,6 +242,40 @@ To perform a reset operation, use the following command:
 
 git reset --hard <commit-hash>
 
+ git checkout
+ ==============
+git checkout is used to discard the changes in the working repository.
+
+ git reset
+ ============
+git reset is used when we want to unstage a file and bring our changes back to the working directory. git reset can also be used to remove commits from the local repository.
+
+ git revert
+ ============
+git revert is used to remove the commits from the remote repository. Since now our changes are in the working directory, let’s add those changes to the staging area and commit them.
+
+git status
+===============
+git status command is used for showing the difference between the working directory and the index which is helpful for understanding git in-depth and also keep track of the tracked and non-tracked changes.
+
+ What is the difference between git stash apply vs git stash pop command?
+ ==============================================================================
+git stash pop command throws away the specified stash (topmost stash by default) after applying it.
+git stash apply command leaves the stash in the stash list for future reuse. In case we wanted to remove it from the list, we can use the git stash drop command.
+git stash pop = git stash apply + git stash drop
+
+ What do the git diff and git status commands do?
+ =======================================
+git diff	git status
+This shows the changes between commits, working trees, etc.	This shows the difference between the working directory and index that is essential in understanding git in depth.
+git diff works in a similar fashion to git status with the only difference of showing the differences between commits and also between the working directory and index.
+
+Git – Cherry Pick
+=====================
+
+git cherry-pick in git means choosing a commit from one branch and applying it to another branch
+t is mainly used if you don’t want to merge the whole branch and you want some of the commits.
+git cherry-pick<commit-hash>
 
 
 
