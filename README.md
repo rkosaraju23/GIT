@@ -281,5 +281,9 @@ git remote add origin`
 =======================
 command is used to add a remote repository to your local Git repository.
 
+Restoring a deleted repository that was owned by a personal account
+=====================================================================
+
+
 
 
