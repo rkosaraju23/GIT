@@ -106,7 +106,8 @@ Master brnach
 Now master is a naming  convention for the main or the default branch in  a repository. So if you're just working off of one  branch, that's where your code will live, and all  
 your code, all your commits, everything will be  in that one branch. Now, this is called branching,
 
-feature Branch
+feature Branch 
+=============================
 
 this  new feature branch will be exactly the same. But  as you make updates to the feature branch, those  changes are only seen in the feature branch. So if  
 you make changes on the feature branch, you make  a commit to save those changes on to that branch.  
@@ -117,10 +118,29 @@ are made on its own branch. Now you can continue  to change the code on master b
 
 Why is this useful? 
 ============
-extremely useful because you will be building out  new features to applications that may break your  code or they are not finished yet. And you don't  want to save them to the main master branch. You  
-want to work on them in kind of a sandbox area. So  you can write all the code unit And get it correct  and in the state that you want, before you merge  it back into the main branch of the code base.  
+extremely useful because you will be building out  new features to applications that may break your  code or they are not finished yet. And you don't  want to save them to the main master branch. You  want to work on them in kind of a sandbox area. So  you can write all the code unit And get it correct  and in the state that you want, before you merge  it back into the main branch of the code base.  
 And this is really helpful when you have many  different people working in the same repository,  or a lot of different branches going on at  once.
 
 scenario
 ==========
+Hot fix branch
+=================
 One very common thing that you'll see  in development is that you'll be working on let's  say, this feature branch for a week or more, and  you have all of these changes that you've made.  And then you find out there's this major bug that  you have to fix real quick. So for that, we make  this other branch called a hotfix branch here, represented by yellow. And you can see that I made  the change in one commit to fix whatever bug was  wrong with the code on its own branch, I made sure  it was working correctly. And then I merged it  back into the master branch. 
+
+create a branch and switch between branches
+==========================================
+git branch -b "branch name"
+
+git checkout -  git checkout is what you will  use to switch between branches.
+git checkout feature-branch
+git checkout -b feature-branch
+( git checkout is what you will  use to switch between branches. But to tell it  to create a new branch, use dash B, and then you  give it the name of your branch
+git checkout -b "new branch name ")
+
+delete Branch 
+===============
+git checkout -d "branch name"
+
+git diff
+=======
+ diffing, shows me what  changes have been made, it compares two versions of the code and shows me all of the lines that  have been changed.
