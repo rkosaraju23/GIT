@@ -137,6 +137,8 @@ git checkout -b feature-branch
 ( git checkout is what you will  use to switch between branches. But to tell it  to create a new branch, use dash B, and then you  give it the name of your branch
 git checkout -b "new branch name ")
 
+Hit Q to exist from branch from command line
+
 delete Branch 
 ===============
 git checkout -d "branch name"
@@ -151,3 +153,45 @@ git pull request (PR)
  what is a pull request or  a PR ?
 it's basically a request to have your code  pulled into another branch. In the example we're  using today, we have a feature branch, and we want  
 to have our code pulled into the master branch. So  we make a PR from the feature branch to the master branch. Now once we have made a PR, anyone can  review our code, comment on it, ask us to make changes or updates. Now, after you make a PR, you  can also update the code just by making additional commits and pushing them up to GitHub, as long as  it's on the same branch that you're making the PR with. Once the PR is merged, you'll generally  delete your feature or source branch
+
+git add -am "message"
+================
+This  basically adds and commits at the same time. But it only works for modified files, not for newly  created files.
+
+Git slash
+===========
+it's basically a way for you to stash your  changes somewhere. And then you can retrieve them later. But it's not making a commit to get.  It's like a temporary holding place.
+
+git merge
+===========
+git merge master
+
+What’s the Difference Between Merge and Rebase?
+=======================================
+ git merge combines changes from one branch (source branch) into another branch (target branch), 
+ Git Merge logs show you the complete history of commit merging.
+ 
+ git rebase moves the changes from one branch to another branch.
+ Git Rebase logs are linear. As the commits are rebased, the history is altered to reflect this.
+
+merge conflict
+=============
+Git usually handles feature merges automatically but sometimes while working in a team environment, there might be cases of conflicts such as:
+1. When two separate branches have changes to the same line in a file
+2. A file is deleted in one branch but has been modified in the other.
+These conflicts have to be solved manually after discussion with the team as git will not be able to predict what and whose changes have to be given precedence.
+
+undoing commits
+================
+git reset - unstaged changes
+Git reset command. So I can either do Git reset  with no arguments, or I can say Git reset, and just the name of the file that I want to onstage.
+
+git reset HEAD~1 - it will completely undo the last commit.
+Head means to get is a pointer to the last commit.  So I'm telling it to do something with the last commit.
+
+Logs
+=====
+git log 
+see a log of all your commits.
+
+
