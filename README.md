@@ -143,4 +143,11 @@ git checkout -d "branch name"
 
 git diff
 =======
+git diff branch name 
  diffing, shows me what  changes have been made, it compares two versions of the code and shows me all of the lines that  have been changed.
+ 
+git pull request (PR)
+==================
+ what is a pull request or  a PR ?
+it's basically a request to have your code  pulled into another branch. In the example we're  using today, we have a feature branch, and we want  
+to have our code pulled into the master branch. So  we make a PR from the feature branch to the master branch. Now once we have made a PR, anyone can  review our code, comment on it, ask us to make changes or updates. Now, after you make a PR, you  can also update the code just by making additional commits and pushing them up to GitHub, as long as  it's on the same branch that you're making the PR with. Once the PR is merged, you'll generally  delete your feature or source branch
