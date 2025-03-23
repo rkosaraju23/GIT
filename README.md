@@ -277,5 +277,9 @@ git cherry-pick in git means choosing a commit from one branch and applying it t
 t is mainly used if you don’t want to merge the whole branch and you want some of the commits.
 git cherry-pick<commit-hash>
 
+git remote add origin` 
+=======================
+command is used to add a remote repository to your local Git repository.
+
 
 
