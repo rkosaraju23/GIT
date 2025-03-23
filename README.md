@@ -193,5 +193,55 @@ Logs
 =====
 git log 
 see a log of all your commits.
+git reset "hash of commint SHA"
+
+git reset
+==========
+git reset --hard "SHA"
+ I want to get rid of all of the changes after  a certain point? 
+git reset --mixed: Resets the HEAD and updates the staging area, but leaves the working directory unchanged.
+git reset --soft: Only resets the HEAD, leaving both the staging area and the working directory unchanged.
+git reset --hard: Resets the HEAD, updates the staging area, and resets the working directory to match the specified commit.
+
+ git forking vs git cloning
+ ===========================
+git forking -it's going to make a complete copy of the  repository and I have complete  control to make any updates or changes that I  
+want to this code ---Independent Copy
+A fork is a personal copy of someone else’s repository that lives on your GitHub account. Forking a repository allows you to freely experiment with changes without affecting the original project.
+
+git cloing -Local copy 
+A clone is a copy of a repository that is created on your local machine. Cloning a repository allows you to work on a project offline
+
+git pull vs get fetch
+=====================
+The key difference between git fetch and pull is that 
+git pull copies changes from a remote repository directly into your working directory,
+while git fetch does not. The git fetch command only copies changes into your local Git repo. 
+
+The local Git repository -where the history of all commits across all branches are maintained.
+A working directory- where a developer actively edits and updates files that Git tracks.
+get fetch - git fetch+ git merge 
+
+git fetch retrieves changes from the remote repository without applying them to the local branch, running git pull automatically integrates the changes from the remote repository into the local branch.
+
+git logs - reflog
+====================
+git log shows the commit log accessible from the refs (heads, tags, remotes)
+git reflog is a record of all commits that are or were referenced in your repo at any time.
+
+git revert -git reset
+======================
+Git Revert is used to undo a change. This operation creates a new commit that undoes the change by reversing it. Revert is a safer option when working with other developers, as it preserves the commit history and doesn’t affect others’ work.
+To perform a revert operation, use the following command:
+git revert <commit-hash>
+After running this command, a new commit is created containing the reverted changes, and the commit history is updated.
+
+Git Reset is used to undo operations by rewriting the commit history. This operation removes all commits between the current HEAD and the specified commit, and it restores the files in the working directory to the state of the specified commit. Reset can cause problems when working with other developers, so it should be used with caution.
+
+To perform a reset operation, use the following command:
+
+git reset --hard <commit-hash>
+
+
 
 
