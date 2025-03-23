@@ -77,3 +77,50 @@ git add .
 ========
 Now most of  the time, or a lot of the time you see people use  a period, which means you're telling Git to track  all of the files that are listed here, 
 
+Push locally created branch to remote location
+=================================
+
+git remote add origin "link of git remote repository "
+Git remote, now remote mean somewhere else, but not on this computer. We're  going to use this to add a reference to the remote  
+repository on GitHub.
+
+git remote -v 
+============
+ it shows any remote repositories that I've connected to this repo.
+
+ git push -u origin master
+ ================
+ u - upstream
+ meaning this is where I want to push it to  by default. So I'm going to do dash u for set  
+upstream and then enter In the future, I can just  use git push without typing out origin Master
+
+Git Branching stratagey 
+===========================
+Master or Main Branch 
+Development Branch 
+hot fix branch 
+feature branch 
+Release Branch 
+
+Master brnach
+Now master is a naming  convention for the main or the default branch in  a repository. So if you're just working off of one  branch, that's where your code will live, and all  
+your code, all your commits, everything will be  in that one branch. Now, this is called branching,
+
+feature Branch
+
+this  new feature branch will be exactly the same. But  as you make updates to the feature branch, those  changes are only seen in the feature branch. So if  
+you make changes on the feature branch, you make  a commit to save those changes on to that branch.  
+And then you switch back to the master branch, you  won't be able to see any of the changes that you  made on that feature branch. 
+Each individual  branch has no way of knowing what commits or
+what changes have been made to any other branch.  Each branch is only keeping track of what changes  
+are made on its own branch. Now you can continue  to change the code on master branch and save it 
+
+Why is this useful? 
+============
+extremely useful because you will be building out  new features to applications that may break your  code or they are not finished yet. And you don't  want to save them to the main master branch. You  
+want to work on them in kind of a sandbox area. So  you can write all the code unit And get it correct  and in the state that you want, before you merge  it back into the main branch of the code base.  
+And this is really helpful when you have many  different people working in the same repository,  or a lot of different branches going on at  once.
+
+scenario
+==========
+One very common thing that you'll see  in development is that you'll be working on let's  say, this feature branch for a week or more, and  you have all of these changes that you've made.  And then you find out there's this major bug that  you have to fix real quick. So for that, we make  this other branch called a hotfix branch here, represented by yellow. And you can see that I made  the change in one commit to fix whatever bug was  wrong with the code on its own branch, I made sure  it was working correctly. And then I merged it  back into the master branch. 
