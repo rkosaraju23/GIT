@@ -284,6 +284,10 @@ command is used to add a remote repository to your local Git repository.
 Restoring a deleted repository that was owned by a personal account
 =====================================================================
 
+Git, "squash"
+================
+refers to combining multiple commits into a single commit, typically used to clean up a messy commit history or simplify the merging of branches. 
+
 
 
 
